@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<K5project version="1.1">
+   <networks>
+   </networks>
+   <fieldbus>
+      <K5BusDDK850s K5ID="1" NAME="TEMPLATE" TEMPLATE="Template.icd" SCLPATH="__t5_busddk850s.scl" GO_PATH="__t5_busddk850GOs.scl" FILEDIR="" NICID="" MAXBRCB="100" MAXCONN="0" TRACE="3" LOCALGOOSESCL="" __F="-1">
+         <fieldbusmaster K5ID="2" NAME="LD1" GCB="" __F="-1">
+            <fieldbusslave K5ID="3" NAME="GGIO1" __F="-1">
+               <fieldbusvar K5ID="4" NAME="LD1_GGIO1.Beh_q" DO="Beh" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="5" NAME="LD1_GGIO1.Beh_stVal" DO="Beh" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="6" NAME="LD1_GGIO1.Beh_t" DO="Beh" DA="t" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="7" NAME="LD1_GGIO1.SPCSO1_Control" DO="SPCSO1" DA="" FC="CO" INDEX="" MODE="1" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="8" NAME="LD1_GGIO1.SPCSO1_Cancel_ctlVal" DO="SPCSO1" DA="Cancel.ctlVal" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="9" NAME="LD1_GGIO1.SPCSO1_Oper_ctlVal" DO="SPCSO1" DA="Oper.ctlVal" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="10" NAME="LD1_GGIO1.SPCSO1_SBO" DO="SPCSO1" DA="SBO" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="11" NAME="LD1_GGIO1.SPCSO1_SBOw_ctlVal" DO="SPCSO1" DA="SBOw.ctlVal" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="12" NAME="LD1_GGIO1.SPCSO1_ctlModel" DO="SPCSO1" DA="ctlModel" FC="CF" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="13" NAME="LD1_GGIO1.SPCSO1_operTimeout" DO="SPCSO1" DA="operTimeout" FC="CF" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="14" NAME="LD1_GGIO1.SPCSO1_sboTimeout" DO="SPCSO1" DA="sboTimeout" FC="CF" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="15" NAME="LD1_GGIO1.SPCSO1_stVal" DO="SPCSO1" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+            </fieldbusslave>
+            <fieldbusslave K5ID="16" NAME="LLN0" __F="-1">
+               <fieldbusvar K5ID="17" NAME="LD1_LLN01.Beh_q" DO="Beh" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="18" NAME="LD1_LLN01.Beh_stVal" DO="Beh" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="19" NAME="LD1_LLN01.Beh_t" DO="Beh" DA="t" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="20" NAME="LD1_LLN01.Health_stVal" DO="Health" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="21" NAME="LD1_LLN01.Mod_stVal" DO="Mod" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="22" NAME="LD1_LLN01.NamPlt_swRev" DO="NamPlt" DA="swRev" FC="DC" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="23" NAME="LD1_LLN01.NamPlt_vendor" DO="NamPlt" DA="vendor" FC="DC" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+            </fieldbusslave>
+            <fieldbusslave K5ID="24" NAME="LPHD1" __F="-1">
+               <fieldbusvar K5ID="25" NAME="LD1_LPHD.PhyHealth_q" DO="PhyHealth" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="26" NAME="LD1_LPHD.PhyHealth_stVal" DO="PhyHealth" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="27" NAME="LD1_LPHD.PhyNam_vendor" DO="PhyNam" DA="vendor" FC="DC" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+            </fieldbusslave>
+            <fieldbusslave K5ID="28" NAME="XCBR1" __F="-1">
+               <fieldbusvar K5ID="29" NAME="LD1_XCBR1.Beh.q" DO="Beh" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="30" NAME="LD1_XCBR1.Beh.stVal" DO="Beh" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="31" NAME="LD1_XCBR1.Beh.t" DO="Beh" DA="t" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="32" NAME="LD1_XCBR1.BlkOpn_Control" DO="BlkOpn" DA="" FC="CO" INDEX="" MODE="1" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="33" NAME="LD1_XCBR1.BlkOpn_Oper_ctlVal" DO="BlkOpn" DA="Oper.ctlVal" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="34" NAME="LD1_XCBR1.BlkOpn_SBOW_ctlVal" DO="BlkOpn" DA="SBOw.ctlVal" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="35" NAME="LD1_XCBR1.BlkOpn_ctlModel" DO="BlkOpn" DA="ctlModel" FC="CF" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="36" NAME="LD1_XCBR1.BlkOpn.q" DO="BlkOpn" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="37" NAME="LD1_XCBR1.BlkOpn.stVal" DO="BlkOpn" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="38" NAME="LD1_XCBR1.BlkOpn.t" DO="BlkOpn" DA="t" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="39" NAME="LD1_XCBR1.Pos_Control" DO="Pos" DA="" FC="CO" INDEX="" MODE="1" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="40" NAME="LD1_XCBR1.Pos_Oper_ctlVal" DO="Pos" DA="Oper.ctlVal" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="41" NAME="LD1_XCBR1.Pos_Oper_origin_orCat" DO="Pos" DA="Oper.origin.orCat" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="42" NAME="LD1_XCBR1.Pos_SBOW_ctlVal" DO="Pos" DA="SBOw.ctlVal" FC="CO" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="43" NAME="LD1_XCBR1.Pos_ctlModel" DO="Pos" DA="ctlModel" FC="CF" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="44" NAME="LD1_XCBR1.Pos.q" DO="Pos" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="45" NAME="LD1_XCBR1.Pos.stVal" DO="Pos" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="46" NAME="LD1_XCBR1.Pos.t" DO="Pos" DA="t" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+            </fieldbusslave>
+         </fieldbusmaster>
+         <fieldbusmaster K5ID="47" NAME="MyLD" GCB="" __F="-1">
+            <fieldbusslave K5ID="48" NAME="LLN0" __F="-1">
+               <fieldbusvar K5ID="49" NAME="MyLD/LLN01.Beh_q" DO="Beh" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="50" NAME="MyLD/LLN01.Beh_stVal" DO="Beh" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="51" NAME="MyLD/LLN01.Beh_t" DO="Beh" DA="t" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="52" NAME="MyLD/LLN01.Health_stVal" DO="Health" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="53" NAME="MyLD/LLN01.Mod_stVal" DO="Mod" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="54" NAME="MyLD/LLN01.NamPlt_swRev" DO="NamPlt" DA="swRev" FC="DC" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="55" NAME="MyLD/LLN01.NamPlt_vendor" DO="NamPlt" DA="vendor" FC="DC" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+            </fieldbusslave>
+            <fieldbusslave K5ID="56" NAME="LPHD1" __F="-1">
+               <fieldbusvar K5ID="57" NAME="MyLD/LPHD_1.PhyHealth_q" DO="PhyHealth" DA="q" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="58" NAME="MyLD/LPHD_1.PhyHealth_stVal" DO="PhyHealth" DA="stVal" FC="ST" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="59" NAME="MyLD/LPHD_1.PhyNam_vendor" DO="PhyNam" DA="vendor" FC="DC" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+            </fieldbusslave>
+            <fieldbusslave K5ID="60" NAME="MMXN1" __F="-1">
+               <fieldbusvar K5ID="61" NAME="MyLD/MMXN1.Vol_Mag_f[0]" DO="Vol" DA="mag.f" FC="MX" INDEX="0" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="62" NAME="MyLD/MMXN1.Vol_Mag_f[1]" DO="Vol" DA="mag.f" FC="MX" INDEX="1" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="63" NAME="MyLD/MMXN1.Vol_Mag_f[2]" DO="Vol" DA="mag.f" FC="MX" INDEX="2" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="64" NAME="MyLD/MMXN1.Vol_Mag_f[3]" DO="Vol" DA="mag.f" FC="MX" INDEX="3" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="65" NAME="MyLD/MMXN1.Vol_Mag_f[4]" DO="Vol" DA="mag.f" FC="MX" INDEX="4" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="66" NAME="MyLD/MMXN1.Vol_Mag_f[5]" DO="Vol" DA="mag.f" FC="MX" INDEX="5" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="67" NAME="MyLD/MMXN1.Vol_Mag_f[6]" DO="Vol" DA="mag.f" FC="MX" INDEX="6" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="68" NAME="MyLD/MMXN1.Vol_Mag_f[7]" DO="Vol" DA="mag.f" FC="MX" INDEX="7" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="69" NAME="MyLD/MMXN1.Vol_Mag_f[8]" DO="Vol" DA="mag.f" FC="MX" INDEX="8" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="70" NAME="MyLD/MMXN1.Vol_Mag_f[9]" DO="Vol" DA="mag.f" FC="MX" INDEX="9" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="71" NAME="MyLD/MMXN1.Vol_Mag_i[0]" DO="Vol" DA="mag.i" FC="MX" INDEX="0" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="72" NAME="MyLD/MMXN1.Vol_Mag_i[1]" DO="Vol" DA="mag.i" FC="MX" INDEX="1" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="73" NAME="MyLD/MMXN1.Vol_Mag_i[2]" DO="Vol" DA="mag.i" FC="MX" INDEX="2" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="74" NAME="MyLD/MMXN1.Vol_Mag_i[3]" DO="Vol" DA="mag.i" FC="MX" INDEX="3" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="75" NAME="MyLD/MMXN1.Vol_Mag_i[4]" DO="Vol" DA="mag.i" FC="MX" INDEX="4" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="76" NAME="MyLD/MMXN1.Vol_Mag_i[5]" DO="Vol" DA="mag.i" FC="MX" INDEX="5" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="77" NAME="MyLD/MMXN1.Vol_Mag_i[6]" DO="Vol" DA="mag.i" FC="MX" INDEX="6" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="78" NAME="MyLD/MMXN1.Vol_Mag_i[7]" DO="Vol" DA="mag.i" FC="MX" INDEX="7" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="79" NAME="MyLD/MMXN1.Vol_Mag_i[8]" DO="Vol" DA="mag.i" FC="MX" INDEX="8" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="80" NAME="MyLD/MMXN1.Vol_Mag_i[9]" DO="Vol" DA="mag.i" FC="MX" INDEX="9" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="81" NAME="MyLD/MMXN1.Vol_q" DO="Vol" DA="q" FC="MX" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+               <fieldbusvar K5ID="82" NAME="MyLD/MMXN1.Vol_t" DO="Vol" DA="t" FC="MX" INDEX="" MODE="0" RETAIN="0" __F="-1"/>
+            </fieldbusslave>
+         </fieldbusmaster>
+      </K5BusDDK850s>
+   </fieldbus>
+</K5project>

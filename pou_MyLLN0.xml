@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="MyLLN0" kind="UDFB" lge="FBD">
+         <vargroup name="MyLLN0" kind="LOCAL">
+            <var name="NamPlt_vendor" type="STRING" len="255"/>
+            <var name="NamPlt_swRev" type="STRING" len="255"/>
+            <var name="Beh_stVal" type="SINT"/>
+            <var name="Beh_q" type="UDINT"/>
+            <var name="Beh_t" type="LREAL"/>
+            <var name="Health_stVal" type="SINT"/>
+            <var name="Mod_stVal" type="SINT"/>
+         </vargroup>
+<defines name="MyLLN0"></defines>
+         <sourceFBD sxcell="16" sycell="16">
+         </sourceFBD>
+      </pou>
+   </programs>
+</K5project>

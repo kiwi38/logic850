@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<K5project version="1.1">
+   <types>
+      <type name="Beh_stVal_q_t" kind="STRUCT" desc="">
+         <var name="stVal" type="SINT"/>
+         <var name="q" type="UDINT"/>
+         <var name="t" type="LREAL"/>
+      </type>
+      <type name="BlkOpen_stVal_q_t" kind="STRUCT" desc="">
+         <var name="stVal" type="BOOL"/>
+         <var name="q" type="UDINT"/>
+         <var name="t" type="LREAL"/>
+      </type>
+      <type name="MyMMXN" kind="STRUCT" desc="">
+         <var name="Vol_q" type="UDINT"/>
+         <var name="Vol_t" type="LREAL"/>
+         <var name="Vol_Mag_i" type="DINT" dim="10"/>
+         <var name="Vol_Mag_f" type="REAL" dim="10"/>
+      </type>
+      <type name="Pos_stVal_q_t" kind="STRUCT" desc="">
+         <var name="stVal" type="UDINT"/>
+         <var name="q" type="UDINT"/>
+         <var name="t" type="LREAL"/>
+      </type>
+   </types>
+</K5project>

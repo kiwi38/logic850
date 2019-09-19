@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="MyXCBR" kind="UDFB" lge="FBD">
+         <vargroup name="MyXCBR" kind="LOCAL">
+            <var name="Beh" type="Beh_stVal_q_t"/>
+            <var name="Pos_Oper_ctlVal" type="BOOL"/>
+            <var name="Pos_Oper_origin_orCat" type="SINT"/>
+            <var name="Pos" type="Pos_stVal_q_t"/>
+            <var name="Pos_ctlModel" type="SINT"/>
+            <var name="Pos_Control" type="WORD"/>
+            <var name="Pos_SBOW_ctlVal" type="BOOL"/>
+            <var name="BlkOpn" type="BlkOpen_stVal_q_t"/>
+            <var name="BlkOpn_ctlModel" type="SINT"/>
+            <var name="BlkOpn_Control" type="UINT"/>
+            <var name="BlkOpn_SBOW_ctlVal" type="BOOL"/>
+            <var name="BlkOpn_Oper_ctlVal" type="BOOL"/>
+         </vargroup>
+<defines name="MyXCBR"></defines>
+         <sourceFBD sxcell="16" sycell="16">
+         </sourceFBD>
+      </pou>
+   </programs>
+</K5project>

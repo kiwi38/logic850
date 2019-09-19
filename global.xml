@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<K5project version="1.1">
+   <variables>
+      <vargroup name="(Global)" kind="GLOBAL">
+         <var name="LD1_XCBR1" type="MyXCBR"/>
+         <var name="LD1_LLN01" type="MyLLN0"/>
+         <var name="LD1_LPHD" type="MyLPHD"/>
+         <var name="LD1_GGIO1" type="MyGGIO"/>
+      </vargroup>
+      <vargroup name="(Retain)" kind="RETAIN">
+      </vargroup>
+   </variables>
+</K5project>

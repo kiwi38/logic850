@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="IEC61850_SPC" kind="UDFB" lge="ST">
+         <vargroup name="IEC61850_SPC" kind="LOCAL">
+            <var name="Control" type="UINT" attr="INOUT"/>
+            <var name="ControlModel" type="SINT" attr="IN"/>
+            <var name="Oper_ctlVal" type="BOOL" attr="IN"/>
+            <var name="stVal" type="BOOL" attr="IN"/>
+            <var name="OperateAddCause" type="UINT" attr="IN"/>
+            <var name="DoneAddCause" type="UINT" attr="IN"/>
+            <var name="bSelect" type="BOOL" attr="IN"/>
+            <var name="bChange" type="BOOL" attr="IN"/>
+            <var name="bDone" type="BOOL" attr="IN"/>
+            <var name="ctlVal" type="BOOL" attr="OUT"/>
+            <var name="bOperate" type="BOOL" attr="OUT"/>
+            <var name="_id_FBD_Q51" type="BOOL">
+         <varinfo type="4" data="&lt;EDIT&gt;&lt;SEL&gt;"/>
+         <varinfo type="5" data="FBDFLOW"/>
+            </var>
+            <var name="_id_FBD_Q50" type="BOOL">
+         <varinfo type="4" data="&lt;EDIT&gt;&lt;SEL&gt;"/>
+         <varinfo type="5" data="FBDFLOW"/>
+            </var>
+            <var name="Selected" type="BOOL"/>
+            <var name="SelectAddCause" type="UINT"/>
+            <var name="SelectAck" type="BOOL"/>
+            <var name="Select" type="BOOL"/>
+            <var name="OperateAck" type="BOOL"/>
+            <var name="DoneAck" type="BOOL"/>
+            <var name="CancelAddCause" type="UINT"/>
+            <var name="CancelAck" type="BOOL"/>
+            <var name="Cancel" type="BOOL"/>
+            <var name="Busy" type="BOOL"/>
+            <var name="bPrint" type="BOOL"/>
+            <var name="bDebug" type="BOOL" init="TRUE"/>
+            <var name="PreviousValue" type="UINT"/>
+            <var name="Inst_TON" type="TON"/>
+         </vargroup>
+<defines name="IEC61850_SPC"></defines>
+         <sourceSTIL>bPrint := false;
+if Control &lt;&gt; PreviousValue then
+    bPrint := bDebug;
+    PreviousValue := Control;
+end_if;
+ 
+
+(*  full state machine, works for all ctlModel dpc command *)
+CASE any_to_dint(Control) OF
+  //Select
+     99 : //99 - wants select
+        if bPrint then printf(&apos;IEC61850:%ld Wants select&apos;,any_to_dint(Control)); end_if;
+        Select := true;  
+        
+        if SelectAck = true AND bSelect then     // ADDED TO TEST sboTimeout parameter
+            Select := false;  
+        
+            //100 select_ok; 103 select_failed
+            Control := 100 + SelectAddCause;
+            printf(&apos;IEC61850:%ld Select&apos;,any_to_dint(Control));
+        end_if;
+            
+  // Operate
+    199 : //199 - wants Operate
+        if bPrint then printf(&apos;IEC61850:%ld Wants bOperate&apos;,any_to_dint(Control)); end_if;
+        IF bChange THEN     // ADDED TO TEST operTimeout parameter
+            ctlVal := Oper_ctlVal;
+            bOperate := true;
+            
+            if OperateAck = true then
+                bOperate := false;
+                if OperateAddCause = 0 then
+                    Control := 200; //200 operate_ok
+                else
+                    Control := 200 + OperateAddCause;
+                end_if;
+                printf(&apos;IEC61850:%ld Operate&apos;,any_to_dint(Control));
+            end_if;
+    
+            (* end of send command to Hardware *)
+            Selected := false;  
+        END_IF;
+  //Operated with enhanced security
+    200 : // opereted - ctrModel= 3 or 4, answer from Hardware
+        if (ControlModel = 3) or (ControlModel = 4) then
+            Busy := True;
+        
+            if DoneAck = true then
+                 Busy := false;
+                 //400 operated_ok, server sends Terminate+
+                 //4xx - server sends Terminate resp-
+                Control := 400 + DoneAddCause;
+                printf(&apos;IEC61850:%ld Done&apos;,any_to_dint(Control));
+            end_if;
+        end_if;    
+        
+  //Cancel (of Select or of Operete in enhanced security)
+    299 : //299 - wants cancel
+        Cancel := true;
+        
+        if CancelAck then
+            Cancel := false;
+            Selected := false;
+            Control := 300 + CancelAddCause;
+            printf(&apos;IEC61850:%ld Cancel&apos;,any_to_dint(Control));
+        end_if;
+     
+END_CASE;
+
+SelectAck := Select;
+SelectAddCause := 0;
+
+OperateAck := bOperate;
+//OperateAddCause := 0;
+
+Inst_TON( Busy, T#4s );
+DoneAck := Inst_TON.Q AND bDone;
+//DoneAck := Busy;
+//DoneAddCause := 0;
+
+CancelAck := Cancel;
+CancelAddCause := 0;
+
+         </sourceSTIL>
+      </pou>
+   </programs>
+</K5project>
